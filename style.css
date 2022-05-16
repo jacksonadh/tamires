@@ -1,0 +1,41 @@
+:root {
+  --rich-black: #111112ff;
+  --medium-rose: #F18B8B;
+  --light-rose: #FFB6C1;
+  --white: #fdfdffff;
+  --columbia-blue: #c0d8e0ff;
+  font-size: 65.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--white);
+}
+
+body {
+  background-color: var(--rich-black);
+}
+
+main {
+  display: flex;
+}
+
+aside {
+  width: 50vw;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  background-color: var(--medium-rose);
+  border-radius: 0.5rem;
+  width: 40vw;
+  height: 50vh;
+}
