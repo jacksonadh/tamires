@@ -6,22 +6,62 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>Bem vindo</title>
+  <title>Cadastre-se</title>
 </head>
 
 <body>
   <main>
     <aside class="left">
-      <img src="" alt="" />
+      <h1>Cadastre-se</h1>
+      <img src="./img/bg-cadastro.png"
+        alt="desenho de uma garota apontando para a direita, em direção ao formulário de cadastro" />
     </aside>
 
     <aside class="right">
       <form action="">
-        <h2>Sign Up for Free</h2>
-        <label>
-          First Name<span class="req">*</span>
-        </label>
-        <input type="text" required autocomplete="off" />
+        <h2>Cadastre-se gratuitamente</h2>
+
+        <div class="form-container">
+          <label>
+            Nome completo<span>*</span>
+          </label>
+          <input type="text" required autocomplete="off" placeholder="Maria Joana Albuquerque" />
+        </div>
+
+        <fieldset>
+          <legend>Selecione sua função/cargo: </legend>
+
+          <div>
+            <input type="radio" id="estudante" name="funcao" value="estudante" checked>
+            <label for="estudante">Estudante</label><br>
+          </div>
+
+          <div>
+            <input type="radio" id="coordenador" name="funcao" value="coordenador">
+            <label for="coordenador">Coordenador</label><br>
+          </div>
+
+        </fieldset>
+
+        <div class="form-container">
+          <label>
+            Matricula<span>*</span>
+          </label>
+          <input type="number" required autocomplete="off" placeholder="12345678" />
+        </div>
+
+        <div class="form-container">
+          <label>
+            E-mail<span>*</span>
+          </label>
+          <input type="text" required autocomplete="off" placeholder="m.joanaalbuquerque@gmail.com" />
+        </div>
+
+        <div class="button-container">
+          <button type="submit" id="cadastrar">CADASTRAR</button>
+          <button type="submit" id="login">LOGIN</button>
+        </div>
+
       </form>
     </aside>
   </main>

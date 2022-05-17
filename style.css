@@ -1,9 +1,10 @@
 :root {
-  --rich-black: #111112ff;
+  --green: #5B9FA1;
+  --dark-green: #0e5355;
+  --rose: #E37DBD;
   --medium-rose: #F18B8B;
   --light-rose: #FFB6C1;
   --white: #fdfdffff;
-  --columbia-blue: #c0d8e0ff;
   font-size: 65.5%;
 }
 
@@ -11,11 +12,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--white);
 }
 
 body {
-  background-color: var(--rich-black);
+  background-color: var(--white);
+  color: var(--medium-rose);
 }
 
 main {
@@ -24,18 +25,156 @@ main {
 
 aside {
   width: 50vw;
-}
-
-.right {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
 }
 
-form {
+.left h1 {
+  font-size: 5rem;
+}
+
+.left img {
+  max-width: 50vw;
+}
+
+.right form {
   background-color: var(--medium-rose);
   border-radius: 0.5rem;
   width: 40vw;
-  height: 50vh;
+  height: 65vh;
+  padding: 4rem;
+
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--white);
+
+  box-shadow: 5px 5px 5px var(--light-rose)
+}
+
+.right form h2 {
+  font-size: 3rem;
+  margin-bottom: 7rem;
+}
+
+.right .form-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.right form label {
+  padding-right: 1rem;
+  text-align: right;
+  width: 20rem;
+}
+
+.right form input {
+  padding: 0.5rem;
+  width: 15vw;
+  border: none;
+  border-radius: 0.3rem;
+  outline: none;
+}
+
+.right form fieldset {
+  max-width: 25vw;
+  border-color: var(--white);
+  margin: 2rem auto;
+}
+
+.right form fieldset div {
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.right form fieldset input {
+  width: 1rem;
+  text-align: left;
+  margin-left: 2rem;
+}
+
+.right .button-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.right .button-container button {
+  margin-top: 3rem;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+
+}
+
+.right .button-container #cadastrar {
+  background-color: var(--green);
+  color: var(--white);
+  font-weight: 800;
+
+  box-shadow: 5px 5px 5px var(--dark-green);
+}
+
+.right .button-container #cadastrar:hover {
+  background-color: var(--dark-green);
+
+  box-shadow: 5px 5px 5px var(--green);
+}
+
+.right .button-container #login {
+  background-color: var(--light-rose);
+  color: var(--white);
+
+  box-shadow: 5px 5px 5px var(--rose);
+}
+
+.right .button-container #login:hover {
+  background-color: var(--rose);
+  color: var(--white);
+
+  box-shadow: 5px 5px 5px var(--light-rose);
+}
+
+@media (max-width: 760px) {
+  .left {
+    display: none;
+  }
+
+  .right {
+    width: 100vw;
+    background: var(--white) url("./img/bg-cadastro.png") no-repeat center;
+  }
+
+  .right form {
+    width: 80vw;
+  }
+
+  .right form h2 {
+    margin-bottom: 2rem;
+  }
+
+  .right form input {
+    width: 40vw;
+  }
+
+  .right form fieldset {
+    max-width: 60vw;
+  }
+
+  .right .form-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .right form label {
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+  }
 }
